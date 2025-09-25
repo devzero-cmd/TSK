@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capture Image</title>
+</head>
+<body>
+    <h1>Capture Image from Camera</h1>
+
+    <!-- Form to take picture -->
+    <form method="POST">
+        <button type="submit">Take Picture</button>
+    </form>
+
+    <!-- Preview of captured image -->
+    {% if image_url %}
+        <h2>Preview:</h2>
+        <img src="{{ image_url }}" width="400" alt="Captured Image">
+    {% endif %}
+
+    <!-- Back to Home -->
+    <p>
+        <a href="{{ url_for('index') }}">Back to Home</a>
+    </p>
+</body>
+</html>
